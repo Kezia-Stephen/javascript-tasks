@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome check using DOM</title>
+</head>
+<body>
+    <label> Enter any string : </label>   
+        <input type="text" id= "pa"> <br> <br>  
+        <label> Resultant string : </label>   
+         <input type = "text" id = "pa2" > </b> <br>   
+        <input type= "submit" onclick = "palindrome()" > <br>   
+	<script>  
+        function palindrome()  
+        {  
+        var a= document.getElementById("pa").value;  
+        var b = "";  
+        for (i = a.length-1; i >= 0; i--)  
+        {  
+        b = b + a[i]  
+        }  
+        if (a == b)  
+        document.getElementById("pa2"). value = b + " is a Palindrome String ";  
+        else  
+        document.getElementById("pa2"). value = b + " is not a Palindrome String";  
+        }  
+ 
+	
+	</script>
+</body>
+</html>
