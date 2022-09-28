@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <center>
+        <h1>Find the Nearest Larger Element</h1>
+        <button onclick="display()">Display</button>
+        <p id="add"></p>
+        <script>
+        var arr = [];
+        document.getElementById("add").innerHTML = arr;
+        function display() {
+          arr.push(10,5,11,12,20,11);
+          document.getElementById("add").innerHTML = arr;
+		  document.write(arr);
+		  document.write("<br>");
+		  document.write("<br>");
+		  var sorted = arr.sort(function(a,b){
+				return a-b;
+			});
+			document.write("Sorted array: " + sorted);
+			document.write("<br>");
+			document.write("<br>");
+			document.write("Output:");
+			document.write("<br>");
+			document.write("<br>");
+			var n = sorted.length;
+			printNearestLarger(sorted,n);
+
+
+			function printNearestLarger(array,n)
+			{
+				var next, i, j;
+					for (i = 0; i < n; i++)
+					{
+					  next = -1;
+					  for (j = i + 1; j < n; j++)
+					  {
+						if (array[i] < array[j])
+						{
+						  next = array[j];
+						  break;
+						}
+					  }
+					  document.write(array[i] + " -- " + next);
+					  document.write("<br>");
+					document.write("<br>");
+					}
+			}
+        }
+		
+			
+
+			
+
+        </script>    
+    </center>
+</body>
+</html>
